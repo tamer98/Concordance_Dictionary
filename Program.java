@@ -17,18 +17,18 @@ public class Program {
 		
 		
 		Scanner s = new Scanner(f);
-		int counter =0;											//Counter to know in wich line are we.
-		while(s.hasNext()) {									//While the file is not at the end.
-			counter++;												//New line.
-			String str = s.nextLine();						//We put the new line in str.
-			str = str.replaceAll("[^a-zA-z ]", "");		//Remove every thing exept a-z , A-Z and the spaces.
+		int counter =0;											
+		while(s.hasNext()) {									
+			counter++;												
+			String str = s.nextLine();						
+			str = str.replaceAll("[^a-zA-z ]", "");		
 			str = str.replaceAll("\\\\"," ");
-			String delims = " ";						//Set spaces as delims.				
-			str = str.trim();										//Delete the leading spaces. 
-			str = str.toLowerCase();							//Convert the str to lower case letters.
-			String[] tokens = str.split(delims);			//Split the str to tokens by the delims.
-			for (String t : tokens) {							//For each word in the tokens we save as new Node in the Linked_List.
-				if(t.equals(""))									//If was there null token we pass.
+			String delims = " ";										
+			str = str.trim();										 
+			str = str.toLowerCase();							
+			String[] tokens = str.split(delims);			
+			for (String t : tokens) {							
+				if(t.equals(""))									
 					continue;
 				ls.addNode(t, counter);
 			}
@@ -41,8 +41,8 @@ public class Program {
 	public static void sortAndSave(Linked_List ls) throws FileNotFoundException {
 		if(ls == null)
 			return;
-		ls.setHead(ls.mergeSort(ls.getHead())); 				//Sort the Linked_List with merge sort.
-		ls.removDupsAndSave();										//Remove the duplicates and save the Linked_List to output file.
+		ls.setHead(ls.mergeSort(ls.getHead())); 				
+		ls.removDupsAndSave();										
 	}
 	// read from file and store words in linked list O(n)
 	// sort the words in the linked list O(n logn)
