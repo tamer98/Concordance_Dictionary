@@ -16,7 +16,7 @@ Alphabetical of all the words in the text, and for each word the numbers of the 
 > ### Data Structure Used - Linked List
 
 ---
-<img width="1394" alt="Screenshot 2022-12-13 at 22 54 24" src="https://user-images.githubusercontent.com/72464761/207441752-05a12cd8-fcf1-41e2-8b7e-89b982dba71c.png">
+<img width="1394" alt="Screenshot 2022-12-13 at 22 58 58" src="https://user-images.githubusercontent.com/72464761/207442258-ab165cb5-21cb-402c-8338-56e863eb10e2.png">
 
 <img width="805" alt="Screenshot 2022-12-13 at 12 59 20" src="https://user-images.githubusercontent.com/72464761/207300548-2e1b0aff-6352-4948-8c74-488d4629ab50.png">
 
