@@ -57,36 +57,36 @@ public class Linked_List {
 		Scanner s = new Scanner(myFile);
 		PrintWriter pw = new PrintWriter(myFile);
 		pw.write("CONCORDANCE\n");
-		char Letter = this.head.word.charAt(0);															//We get the first the first char of the first word in the.
-		Node slow = this.head, fast = this.head.next, fastPrevious = this.head;			//We make 3 pointers one to print and to to help remove dublicates;
-		int checker = 1;																								//Checker to check if we must change the Letter to the next Letter, 0 if no and 1 if yes.
-		if(head !=null) {																								//if the Linked_List not null, because if null we avoid exptions.
-			while(slow != null) {																					//We get every Node on the Linked_List, while the pointer to the head is not null. 
-				if(slow.word.charAt(0)!=Letter) {															//If the current word's first char is not equal to the saved letter we arrive to the next group of words.
-					Letter =slow.word.charAt(0) ;checker=1;											//We Change the letter to the new group of words letter, and change the chekcer to 1 to print this letter.
+		char Letter = this.head.word.charAt(0);															
+		Node slow = this.head, fast = this.head.next, fastPrevious = this.head;			
+		int checker = 1;																								
+		if(head !=null) {																								
+			while(slow != null) {																					
+				if(slow.word.charAt(0)!=Letter) {															
+					Letter =slow.word.charAt(0) ;checker=1;											
 				}
-				if(checker == 1) {																					//If the checker is 1 thats mean we must change the letter to the next letter .
-					pw.write("\n"+(char)(Letter-32)+"\n");												//Print the Letter in capital letter.
-					checker=0;																						//We change the checker to 0 that's mean we wont change the letter to the new letter until we finish the letter group.
+				if(checker == 1) {																					
+					pw.write("\n"+(char)(Letter-32)+"\n");												
+					checker=0;																						
 				}
-				if(fast.next!=null) {																				//If the fast didn't arrive to the tail Node.
-					while(slow.word.equals(fast.word)) {													//Remove duplicates, the fast and it's previous run until the word change.
-						slow.lines +=fast.lines;																	//For each word that we remove we save it's line in the first word.
-						if(fast.next==null) {																		//If we arrived to the end we dont want to continue.
+				if(fast.next!=null) {																				
+					while(slow.word.equals(fast.word)) {													
+						slow.lines +=fast.lines;																	
+						if(fast.next==null) {																		
 							break;
 						}
 						fast = fast.next;
 						fastPrevious = fastPrevious.next;
 					}
 				}
-				pw.write(slow.word + " " + slow.lines+"\n");											//Print the word with its lines.
-				if(fast.next != null) {																				//If the next of the fast is null we wont increase it to the next Node.
+				pw.write(slow.word + " " + slow.lines+"\n");											
+				if(fast.next != null) {																				
 					fast = fast.next;
 					fastPrevious = fastPrevious.next;
 					slow = fastPrevious;
 				}
 				else {
-					if(slow.next!=null) {																			//We increase just the slow and previous pointer to the next Node, but if we arrive to the tail we break the loop.
+					if(slow.next!=null) {																			
 						fastPrevious = fastPrevious.next;
 						slow = fastPrevious;
 					}
