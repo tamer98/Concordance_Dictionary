@@ -11,42 +11,42 @@ public class Linked_List {
 	
 	
 	class Node {
-		private Node next; 									//This is the next node after this node
-		private String word;									//This is the first value of the Node, the word we want to save. 		
-		private String lines ="";								//This is the second value of the Node, the lines that this word appear in.
-		public Node(String word,int lines) {			//Constructor for the Node.
-			this.word = word;									//Save the word.
-			this.lines = lines+" ";								//Save the lines.
-			this.next = null;               						//At first there are no Nodes after this Node.
+		private Node next; 									
+		private String word;											
+		private String lines ="";								
+		public Node(String word,int lines) {			
+			this.word = word;									
+			this.lines = lines+" ";								
+			this.next = null;               						
 		}
 	}
 
-	private Node head;										//The head of the Linked_List we made.
-	private Node tail;											//The tail of the Linked_List we made.
+	private Node head;										
+	private Node tail;											
 	private int length=0;
 
-	public Linked_List() {									//Constructor for the Linked_List.
-		head = null;												//At first there is no head or tail for the Linked_list.
+	public Linked_List() {									
+		head = null;												
 		tail = null;
 	}
 
-	public Node getHead() {								//Getter for head of the Linked_list.
+	public Node getHead() {								
 		return head;
 	}
-	public void setHead(Node head) {					//Setter for head of the Linked_list.
+	public void setHead(Node head) {					
 		this.head = head;
 	}
 
-	public void addNode(String word, int line) {									//Function to add new Node to the Linked_List.
+	public void addNode(String word, int line) {									
 
-		Node newNode = new Node(word,line);										//We create the new Node.
-		if(head == null) {																		//If the head is null we make this Node a head.
-			head = newNode;																	//The new Node is the head of the Linked_List because it's the first word in the Linked_List.
-			tail = newNode;																		//the New Node become the tail of the Linked_list because it's the last word that added to the Linked_List.
+		Node newNode = new Node(word,line);										
+		if(head == null) {																		
+			head = newNode;																	
+			tail = newNode;																		
 		}
-		else {																						//Else we add the Node as the tail of the Linked_List.
-			tail.next = newNode;																//Add New Node to the end of the Linked list.
-			tail = newNode;																		//This new Node become the tail.
+		else {																						
+			tail.next = newNode;																
+			tail = newNode;																		
 		}
 		length++;
 	}
@@ -94,7 +94,7 @@ public class Linked_List {
 				}
 			}
 		}
-		pw.write("\nThere are " + length + " words in the file");								//This is how many different words in the list.
+		pw.write("\nThere are " + length + " words in the file");								
 		pw.close();s.close();
 		System.out.println("Saved in output file!!");
 	}
@@ -127,16 +127,16 @@ public class Linked_List {
 			return h; 
 		} 
 
-		Node middle = getMiddle(h); 							// get the middle of the list 
+		Node middle = getMiddle(h); 							 
 		Node nextofmiddle = middle.next; 
 
-		middle.next = null; 											//Set the next of middle node to null 
+		middle.next = null; 											 
 
-		Node left = mergeSort(h); 								//Apply mergeSort on left list 
+		Node left = mergeSort(h); 								
 
-		Node right = mergeSort(nextofmiddle); 			//Apply mergeSort on right list
+		Node right = mergeSort(nextofmiddle); 			
 
-		Node sortedlist = sortedMerge(left, right); 		//Merge the left and right lists 
+		Node sortedlist = sortedMerge(left, right); 		
 		return sortedlist; 
 	} 
 
