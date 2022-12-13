@@ -12,7 +12,8 @@ A concordance is an alphabetical list of the principal words used in a book or b
 ---
 The program read a text file and create a list
 Alphabetical of all the words in the text, and for each word the numbers of the lines it appears.
-> Structure Used - Linked List
+
+> ### Structure Used - Linked List
 
 ---
 <img width="805" alt="Screenshot 2022-12-13 at 12 59 20" src="https://user-images.githubusercontent.com/72464761/207300548-2e1b0aff-6352-4948-8c74-488d4629ab50.png">
