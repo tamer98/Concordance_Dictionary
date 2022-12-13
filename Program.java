@@ -12,8 +12,8 @@ public class Program {
 		//Get all the words from file with time complexity O(n).
 		//For each word we add to the Linked list with time complexity O(1).
 		//Reading from file and store the words to link lits O(n) + O(1) = O(n).
-		Linked_List ls = new Linked_List();			//Here we build our Linked_List.
-		File f = new File("/Users/TamerAltaji/Desktop/Java-Workplace/DataStructureProject/src/text2.txt");
+		Linked_List ls = new Linked_List();			
+		File f = new File("/.../.../text2.txt");
 		
 		
 		Scanner s = new Scanner(f);
@@ -36,8 +36,8 @@ public class Program {
 		s.close();
 		sortAndSave(ls);
 	}
-	// we sort the linked list with merge sort ( merge sort time complexity is O(n logn) ) .
-	// we print the linked list with time complextiy O(n). 
+	// sort the linked list with merge sort ( merge sort time complexity is O(n logn) ) .
+	// print the linked list with time complextiy O(n). 
 	public static void sortAndSave(Linked_List ls) throws FileNotFoundException {
 		if(ls == null)
 			return;
