@@ -39,7 +39,7 @@ public class Main {
     JScrollPane scrollPane = new JScrollPane(textArea);
     frame.add(scrollPane);
     
-	frame.setLocationRelativeTo(null);
+    frame.setLocationRelativeTo(null);
     frame.setVisible(true);
   }
 }
