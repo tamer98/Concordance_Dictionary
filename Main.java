@@ -28,7 +28,7 @@ public class Main {
     
     JFrame frame = new JFrame();
     frame.setSize(800,800);
-	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     JTextArea textArea = new JTextArea(sb.toString());
     textArea.setFont(font);
